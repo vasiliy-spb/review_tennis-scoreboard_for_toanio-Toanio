@@ -1,3 +1,5 @@
+### [Ревью на реализацию проекта находится здесь](https://github.com/vasiliy-spb/review_tennis-scoreboard_for_toanio-Toanio/blob/code-review/code-review/REVIEW_README.md)
+
 # Tennis Scoreboard
 
 Веб-приложение для управления теннисными матчами, ведения текущего счёта и просмотра истории завершённых встреч.
