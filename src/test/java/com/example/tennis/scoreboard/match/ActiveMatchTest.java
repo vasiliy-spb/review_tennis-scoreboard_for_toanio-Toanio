@@ -4,7 +4,24 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ActiveMatchTest {
+
+    // Есть полезная аннотация org.junit.jupiter.api.BeforeEach.
+        // Метод с ней поможет избавиться от множественного дублирования в классе.
+
+    // После рефакторинга слоя моделей стоит продумать для каждого нового класса детальные тесты,
+        // покрывающие основные, крайние и негативные кейсы.
+
+    // Стоит давать тестам говорящие названия, из которых понятно, какое поведение и при каких условиях проверяется.
+        // Например, shouldIncrementPointsWhenPlayerScores вместо checkWinPoints, или использовать @DisplayName.
+        // Особенно это касается имён вроде checkAD и checkAD2.
+
+    // Также для лучшей читаемости стоит разделять тело теста пустыми строками на три логических блока (Arrange — Act — Assert)
+        // и использовать static import для методов Assertions.
+
+    // Полю не хватает модификатора private.
     ActiveMatch match;
+
+    // Маппер не нужен в тестах класса модели.
     ActivePlayerMapper mapper;
 
     @Test
@@ -39,6 +56,7 @@ public class ActiveMatchTest {
         Assertions.assertEquals(Points.AD, player1.getPoints());
     }
 
+    // Неинформативное название теста с цифрой в конце.
     @Test
     public void checkAD2() {
         ActivePlayer player1 = new ActivePlayer("Oleg", Points.FORTY, 0, 0, 0);

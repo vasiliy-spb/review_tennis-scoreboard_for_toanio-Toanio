@@ -6,9 +6,10 @@ import org.springframework.data.domain.Page;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring") // Для "spring" в mapstruct есть специальная константа: MappingConstants.ComponentModel.SPRING
 public interface PlayerMapper {
     PlayersDTO mapToDto(Player player);
 
+    // Можно назвать mapToListDto
     List<PlayersDTO> mapToDto(Page<Player> players);
 }
